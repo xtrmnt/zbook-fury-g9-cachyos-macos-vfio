@@ -16,7 +16,7 @@ This repository contributes the machine-specific build record, a sanitized libvi
 | **virt-manager contributors** | Host-side VM management interface | [virt-manager](https://virt-manager.org/) |
 | **LizardByte / Sunshine contributors** | macOS streaming host | [Sunshine](https://github.com/LizardByte/Sunshine), [documentation](https://docs.lizardbyte.dev/projects/sunshine/latest/) |
 | **Moonlight contributors** | CachyOS streaming client | [Moonlight Qt](https://github.com/moonlight-stream/moonlight-qt), [setup guide](https://github.com/moonlight-stream/moonlight-docs/wiki/Setup-Guide) |
-| **Existential Audio / BlackHole contributors** | Proposed virtual audio device; audio playback not verified in this record | [BlackHole](https://github.com/ExistentialAudio/BlackHole), [official download](https://existential.audio/blackhole/) |
+| **Existential Audio / BlackHole contributors** | Virtual audio device recommended during setup; playback is now owner-confirmed, but use of BlackHole in the final path has not been separately confirmed | [BlackHole](https://github.com/ExistentialAudio/BlackHole), [official download](https://existential.audio/blackhole/) |
 | **Homebrew contributors** | Optional package installation method for BlackHole | [Homebrew](https://brew.sh/), [BlackHole cask](https://formulae.brew.sh/cask/blackhole-2ch) |
 
 The earlier working Ventura VM supplied the machine's known-good Q35/OVMF/CPU and GPU-assignment layout. The Sequoia VM was created separately; the Ventura disks and definition were retained.

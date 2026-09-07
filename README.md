@@ -2,7 +2,7 @@
 
 A personal build record for running macOS Sequoia in QEMU/KVM on an HP ZBook Fury G9, with an AMD Radeon PRO W6600M passed through to the guest and Sunshine/Moonlight providing access from the same laptop's CachyOS desktop.
 
-**Status: working baseline on one machine; still being tested.** This is a configuration reference, not a universal installer or a supported product. Audio playback is not yet confirmed.
+**Status: working baseline on one machine; still being tested.** This is a configuration reference, not a universal installer or a supported product. Audio playback from macOS through Sunshine/Moonlight to CachyOS is confirmed by the owner.
 
 > **No support. Use at your own risk.** I do not provide installation help, troubleshooting, remote assistance, maintenance commitments, or compatibility guarantees. This material is provided **AS IS, WITHOUT WARRANTY**. To the maximum extent permitted by applicable law, I and the contributors are not liable for damages or losses resulting from its use, including data loss, hardware damage, downtime, or lost income. See [DISCLAIMER.md](DISCLAIMER.md), [SUPPORT.md](SUPPORT.md), and [LICENSE](LICENSE).
 
@@ -23,7 +23,7 @@ This project documents configuration and testing. The software that makes it pos
 | Networking | **VMXNET3** on libvirt NAT; DHCP reservation for a stable guest address |
 | Remote desktop | Sunshine in macOS; Moonlight on the **same CachyOS laptop** |
 | Headless use | Existing stream, fresh stream, and a guest reboot worked after removing the DisplayPort cable |
-| Audio | No audio devices with the monitor disconnected; BlackHole proposed, **playback not verified** |
+| Audio | **Owner-confirmed playback** from macOS through Sunshine/Moonlight to CachyOS; final capture settings not recorded |
 
 Host observations: Intel Core **i7-12850HX**, approximately **125 GiB RAM visible to Linux**, QEMU **11.1.1**, libvirt **12.7.0**. These are recorded versions, not minimum requirements or promises about other releases. No exhaustive benchmark, suspend/resume, cold-host-boot, or long-term reliability test was completed.
 

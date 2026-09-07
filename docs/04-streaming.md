@@ -61,9 +61,11 @@ A useful starting profile is 1920×1080, 60 FPS, 30 Mbps, HDR off, hardware deco
 
 Sunshine's macOS encoder is VideoToolbox. Check its logs for actual hardware-encoder selection; Metal support alone does not prove hardware video encoding. Leave advanced encoder options at defaults until measuring a problem. See [Sunshine configuration](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2configuration.html).
 
-## Audio: pending verification
+## Audio: playback verified
 
-With the monitor unplugged, `system_profiler SPAudioDataType` returned no devices. Audio playback through Moonlight had **not been confirmed** when this repository was prepared.
+The owner subsequently confirmed successful audio playback from the macOS VM through Sunshine/Moonlight to the CachyOS laptop. **End-to-end playback is verified by the owner.** The final macOS output device, Sunshine Audio Sink value, and use of native capture versus BlackHole have not yet been recorded, so no particular method is claimed as the verified solution.
+
+Earlier, with the monitor unplugged, `system_profiler SPAudioDataType` returned no devices. The following remains the setup guidance discussed during troubleshooting, rather than a confirmed record of the final settings.
 
 Current upstream Sunshine documentation describes native system-audio capture on macOS 14+ with **Audio Sink left blank**. Installed-release behavior can differ. The proposed next step was a virtual output using [BlackHole 2ch](https://existential.audio/blackhole/). If using Homebrew in the macOS guest:
 
@@ -71,4 +73,4 @@ Current upstream Sunshine documentation describes native system-audio capture on
 brew install --cask blackhole-2ch
 ```
 
-After installation and restart, select BlackHole 2ch as the macOS output and test Sunshine's native capture first. If necessary, use `BlackHole 2ch` explicitly as Sunshine's audio sink according to the installed release's instructions. Set Moonlight to stereo and verify CachyOS's volume mixer. Installation, permissions, device selection, and successful playback must all be checked before marking audio complete.
+After installation and restart, select BlackHole 2ch as the macOS output and test Sunshine's native capture first. If necessary, use `BlackHole 2ch` explicitly as Sunshine's audio sink according to the installed release's instructions. Set Moonlight to stereo and verify CachyOS's volume mixer. For another installation, verify permissions, device selection, and actual playback; the owner's successful result does not establish that these settings work unchanged on every system.

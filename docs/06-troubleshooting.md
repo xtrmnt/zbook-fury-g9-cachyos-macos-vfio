@@ -35,7 +35,7 @@ The overlay showed a 720p HEVC stream with low decoding latency and no network d
 
 ## Missing audio devices
 
-Headless macOS reported an empty audio device list. The DisplayPort audio function being assigned does not prove a usable audio output exists with no display connected. BlackHole was proposed; end-to-end sound remained unverified. Follow the [audio notes](04-streaming.md#audio-pending-verification) before treating this as complete.
+Headless macOS reported an empty audio device list. The DisplayPort audio function being assigned does not prove a usable audio output exists with no display connected. BlackHole was proposed during troubleshooting. The owner subsequently confirmed end-to-end playback through Moonlight; the final device and capture settings have not been recorded. See the [updated audio notes](04-streaming.md#audio-playback-verified).
 
 ## Missing USB devices at boot
 
